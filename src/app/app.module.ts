@@ -7,6 +7,7 @@ import { MenuComponent } from './menu/menu.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import {RouterModule} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {AppRoutingModule} from "./app-routing.module";
     BrowserModule,
     RouterModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
