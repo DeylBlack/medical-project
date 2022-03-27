@@ -8,13 +8,15 @@ import { UserFormComponent } from './user-form/user-form.component';
 import {RouterModule} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ApiComponent } from './api/components/api.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LogInPageComponent,
     MenuComponent,
-    UserFormComponent
+    UserFormComponent,
+    ApiComponent
   ],
   imports: [
     BrowserModule,
