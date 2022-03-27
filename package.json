@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "start_node": "node index.js",
-    "server": "nodemon index.js"
+    "server": "nodemon index.js",
+    "app": "concurrently \"npm run server\" \"npm run start\""
   },
   "private": true,
   "dependencies": {
