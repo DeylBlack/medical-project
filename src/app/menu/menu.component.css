@@ -11,10 +11,10 @@
 }
 
 .menu-text {
-font-size: 30px;
+  font-size: 30px;
   color: white;
   margin-left: 80px;
- padding-top: 24px;
+  padding-top: 24px;
 }
 
 .menu-btn {
@@ -27,8 +27,7 @@ font-size: 30px;
   height: 30px;
   cursor: pointer;
   z-index: 1;
-margin-top: -82px;
-
+  margin-top: -56px;
 }
 
 .menu-btn > span,
@@ -75,7 +74,6 @@ margin-top: -82px;
   font-weight: 600;
   text-decoration: none;
   margin-left: 20px;
-
 }
 
 .menu-item:hover {
