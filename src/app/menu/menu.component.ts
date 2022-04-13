@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  showFiller = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
 }
+
+
+

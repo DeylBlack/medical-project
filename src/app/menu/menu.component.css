@@ -1,4 +1,14 @@
-.menu{
+.example-container {
+  border: none;
+  height: 100vh;
+  margin-top: 26px;
+}
+
+.example-sidenav {
+  padding: 20px;
+}
+
+.menu {
   width: 100%;
   height: 70px;
   background-color: purple;
@@ -6,62 +16,11 @@
   top: 0;
 }
 
-#menu-toggle {
-  opacity: 0;
-}
-
 .menu-text {
   font-size: 30px;
   color: #ffffff;
   margin-left: 80px;
   padding-top: 24px;
-}
-
-.menu-btn {
-  display: flex; /* используем flex для центрирования содержимого */
-  align-items: center;  /* центрируем содержимое кнопки */
-  position: sticky;
-  top: -100px;
-  left: 40px;
-  width: 20px;
-  height: 30px;
-  cursor: pointer;
-  z-index: 1;
-  margin-top: -56px;
-}
-
-.menu-btn > span,
-.menu-btn > span::before,
-.menu-btn > span::after {
-  display: block;
-  position: absolute;
-  width: 30px;
-  height: 3px;
-  background-color: #ffffff;
-  padding-top: 0px;
-  border-radius: 3px;
-}
-
-.menu-btn > span::before {
-  content: '';
-  top: -8px;
-}
-
-.menu-btn > span::after {
-  content: '';
-  top: 8px;
-}
-
-.menu-box {
-  display: block;
-  visibility: hidden;
-  width: 250px;
-  height: auto;
-  margin: 0px 0px;
-  margin-top: 20px;
-  padding: 20px 0;
-  list-style: none;
-  background-color: #ffffff;
 }
 
 .menu-item {
@@ -80,21 +39,38 @@
   background-color: #ffffff;
 }
 
-#menu-toggle:checked ~ .menu-btn > span {
-  transform: rotate(45deg);
+.namigazugtum {
+  position: relative;
+  display: inline-block;
+  width: 2.24em;
+  height: 0.8em;
+  margin-right: 0.3em;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+  text-shadow: 0 1px 0 #151414;
+  margin-left: 0px;
+  border-radius: 4px;
 }
 
-#menu-toggle:checked ~ .menu-btn > span::before {
-  top: 0;
-  transform: rotate(0);
+.namigazugtum:before {
+  content: "";
+  position: absolute;
+  top: 0.3em;
+  left: 0px;
+  width: 100%;
+  border-top: 4px solid white;
+  border-radius: 4px;
 }
 
-#menu-toggle:checked ~ .menu-btn > span::after {
-  top: 0;
-  transform: rotate(90deg);
+.example-sidenav-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -0px;
+
 }
 
-#menu-toggle:checked ~ .menu-box {
-  visibility: visible;
-  left: 0;
+.menu-hamburger {
+  margin-left: 35px;
+  margin-top: -30px;
 }
