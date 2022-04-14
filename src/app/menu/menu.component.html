@@ -1,6 +1,5 @@
-
-<mat-drawer-container class="example-container" autosize>
-  <mat-drawer #drawer class="example-sidenav" mode="side">
+<mat-drawer-container class="menu-container" autosize>
+  <mat-drawer #drawer class="menu-sidenav" mode="side">
     <ul>
       <li><a class="menu-item">Главная</a></li>
       <li><a routerLink="/user-form" class="menu-item">Создать анкету</a></li>
@@ -9,7 +8,7 @@
       <li><a routerLink="/api" class="menu-item">Проверка API</a></li>
     </ul>
   </mat-drawer>
-  <div class="example-sidenav-content">
+  <div class="menu-sidenav-content">
     <div class="menu">
       <p class="menu-text"> Medical Project</p>
       <div class="menu-hamburger">
@@ -20,5 +19,4 @@
   </div>
   <router-outlet></router-outlet>
 </mat-drawer-container>
-
 
