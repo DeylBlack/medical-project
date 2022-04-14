@@ -10,6 +10,7 @@ import { MenuComponent } from './menu/menu.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { AppRoutingModule } from "./app-routing.module";
 import { ApiComponent } from './api/components/api.component';
+import {MatSidenavModule} from "@angular/material/sidenav";
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ApiComponent } from './api/components/api.component';
         AppRoutingModule,
         BrowserAnimationsModule,
         CdkAccordionModule,
+        MatSidenavModule,
     ],
   providers: [],
   bootstrap: [AppComponent]
