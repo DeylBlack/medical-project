@@ -4,6 +4,8 @@ const mongoose = require("mongoose");
 
 const app = express();
 
+app.use(express.json({ extended: true }));
+
 app.use('/api/auth', require('./server/routes/auth.routes'));
 
 const PORT = config.port || 3000;

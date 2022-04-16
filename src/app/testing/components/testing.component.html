@@ -24,13 +24,13 @@
                         [attr.id]="'accordion-body-' + '0'"
                         [attr.aria-labelledby]="'accordion-header-' + '0'">
 
-                    <div class="api-testing-content">
+                    <form class="api-testing-content" [formGroup]="authFormLogin">
                         <h2 align="center">Вход</h2>
 
                         <div class="api-two-column">
 
-                            <input type="text" placeholder="Name...">
-                            <input type="password" placeholder="Password">
+                            <input formControlName="email" type="email" placeholder="Email...">
+                            <input formControlName="password" type="password" placeholder="Password">
 
                         </div>
 
@@ -38,36 +38,25 @@
                             <textarea rows="10" cols="70"></textarea>
                         </div>
 
-                        <button>Check API</button>
+                        <button (click)="testLogin()" [disabled]="authFormLogin.invalid">Check API</button>
+                    </form>
 
-                    </div>
-
-                    <div class="api-testing-content">
+                    <form class="api-testing-content" [formGroup]="authFormRegister">
                         <h2 align="center">Регистрация</h2>
 
                         <div class="api-two-column">
 
-                            <input type="text" placeholder="Name...">
-                            <input type="text" placeholder="Last name...">
+                            <input formControlName="email" type="email" placeholder="Email...">
+                            <input formControlName="password" type="password" placeholder="Password">
 
-                        </div>
-
-                        <div class="api-two-column">
-                            <input type="email" placeholder="Email...">
-                        </div>
-
-                        <div class="api-two-column">
-                            <input type="password" placeholder="Password...">
-                            <input type="password" placeholder="Repeat password...">
                         </div>
 
                         <div class="api-response">
                             <textarea rows="10" cols="70"></textarea>
                         </div>
 
-                        <button>Check API</button>
-
-                    </div>
+                        <button (click)="testRegister()" [disabled]="authFormRegister.invalid">Check API</button>
+                    </form>
 
                 </div>
             </cdk-accordion-item>
