@@ -1,1 +1,22 @@
-<p>menu works!</p>
+<mat-drawer-container class="menu-container" autosize>
+  <mat-drawer #drawer class="menu-sidenav" mode="side">
+    <ul>
+      <li><a class="menu-item">Главная</a></li>
+      <li><a routerLink="/user-form" class="menu-item">Создать анкету</a></li>
+      <li><a class="menu-item">Настройка профиля</a></li>
+      <li><a routerLink="/log-in" class="menu-item">Вход/Регистрация</a></li>
+      <li><a routerLink="/api" class="menu-item">Проверка API</a></li>
+    </ul>
+  </mat-drawer>
+  <div class="menu-sidenav-content">
+    <div class="menu">
+      <p class="menu-text"> Medical Project</p>
+      <div class="menu-hamburger">
+    <span class="namigazugtum" mat-button (click)="drawer.toggle()">
+  </span>
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</mat-drawer-container>
+

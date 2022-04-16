@@ -1,0 +1,101 @@
+<div class="api-wrapper">
+    <div class="api-testing">
+
+        <h1 align="center">Тестирование API</h1>
+
+        <cdk-accordion>
+            <cdk-accordion-item
+                #accordionItem="cdkAccordionItem"
+                class="example-accordion-item"
+                role="button"
+                tabindex="0"
+                [attr.id]="'accordion-header-' + '0'"
+                [attr.aria-expanded]="accordionItem.expanded"
+                [attr.aria-controls]="'accordion-body-' + '0'">
+
+                <div class="item" (click)="accordionItem.toggle()">
+                    <p class="header-api">Click here to open AUTH API</p>
+                </div>
+
+                <div
+                        class="example-accordion-item-body"
+                        role="region"
+                        [style.display]="accordionItem.expanded ? '' : 'none'"
+                        [attr.id]="'accordion-body-' + '0'"
+                        [attr.aria-labelledby]="'accordion-header-' + '0'">
+
+                    <div class="api-testing-content">
+                        <h2 align="center">Вход</h2>
+
+                        <div class="api-two-column">
+
+                            <input type="text" placeholder="Name...">
+                            <input type="password" placeholder="Password">
+
+                        </div>
+
+                        <div class="api-response">
+                            <textarea rows="10" cols="70"></textarea>
+                        </div>
+
+                        <button>Check API</button>
+
+                    </div>
+
+                    <div class="api-testing-content">
+                        <h2 align="center">Регистрация</h2>
+
+                        <div class="api-two-column">
+
+                            <input type="text" placeholder="Name...">
+                            <input type="text" placeholder="Last name...">
+
+                        </div>
+
+                        <div class="api-two-column">
+                            <input type="email" placeholder="Email...">
+                        </div>
+
+                        <div class="api-two-column">
+                            <input type="password" placeholder="Password...">
+                            <input type="password" placeholder="Repeat password...">
+                        </div>
+
+                        <div class="api-response">
+                            <textarea rows="10" cols="70"></textarea>
+                        </div>
+
+                        <button>Check API</button>
+
+                    </div>
+
+                </div>
+            </cdk-accordion-item>
+
+            <cdk-accordion-item
+                #accordionItem1="cdkAccordionItem"
+                class="example-accordion-item"
+                role="button"
+                tabindex="0"
+                [attr.id]="'accordion-header-' + '1'"
+                [attr.aria-expanded]="accordionItem1.expanded"
+                [attr.aria-controls]="'accordion-body-' + '1'">
+
+                <div class="item" (click)="accordionItem1.toggle()">
+                    <p class="header-api">Click</p>
+                </div>
+
+                <div
+                        class="example-accordion-item-body"
+                        role="region"
+                        [style.display]="accordionItem1.expanded ? '' : 'none'"
+                        [attr.id]="'accordion-body-' + '1'"
+                        [attr.aria-labelledby]="'accordion-header-' + '1'">
+
+                    Here will be form for User API
+                </div>
+
+            </cdk-accordion-item>
+        </cdk-accordion>
+    </div>
+</div>
