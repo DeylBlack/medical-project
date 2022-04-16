@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
-import {AuthService} from "../../shared/api/auth.service";
+import {AuthApiService} from "../../shared/api/auth-api.service";
 
 @Component({
   selector: 'app-testing',
@@ -21,7 +21,7 @@ export class TestingComponent implements OnInit {
   });
 
   constructor(
-      private authService: AuthService,
+      private authService: AuthApiService,
       private fb: FormBuilder,
   ) {}
 
