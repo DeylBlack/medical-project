@@ -9,8 +9,11 @@ import { LogInPageComponent } from './log-in-page/log-in-page.component';
 import { MenuComponent } from './menu/menu.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { AppRoutingModule } from "./app-routing.module";
-import { ApiComponent } from './api/components/api.component';
+import { TestingComponent } from './testing/components/testing.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
+import {AuthService} from "./shared/api/auth.service";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,7 +21,7 @@ import {MatSidenavModule} from "@angular/material/sidenav";
     LogInPageComponent,
     MenuComponent,
     UserFormComponent,
-    ApiComponent
+    TestingComponent,
   ],
     imports: [
         BrowserModule,
@@ -27,8 +30,12 @@ import {MatSidenavModule} from "@angular/material/sidenav";
         BrowserAnimationsModule,
         CdkAccordionModule,
         MatSidenavModule,
+        HttpClientModule,
+        ReactiveFormsModule
     ],
-  providers: [],
+  providers: [
+      AuthService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
