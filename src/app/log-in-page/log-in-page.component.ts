@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {AuthApiService} from "../shared/api/auth-api.service";
+import {AuthService} from "../shared/services/auth.service";
 
 @Component({
   selector: 'app-log-in-page',
@@ -21,12 +23,20 @@ export class LogInPageComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-  ) { }
+    private authApiService: AuthApiService,
+    private authService: AuthService,
+  ) {}
 
   ngOnInit(): void {
   }
 
   public login():void{
-    console.log(this.loginForm.value)
+    this.authApiService.login(this.loginForm.value).subscribe((response: any) => {
+      this.authService.login(response.token, response.userId);
+    });
+  }
+
+  public registration(): void {
+    this.authApiService.register(this.registrationForm.value).subscribe();
   }
 }

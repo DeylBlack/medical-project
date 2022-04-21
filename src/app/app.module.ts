@@ -11,9 +11,12 @@ import { UserFormComponent } from './user-form/user-form.component';
 import { AppRoutingModule } from "./app-routing.module";
 import { TestingComponent } from './testing/components/testing.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
-import {AuthService} from "./shared/api/auth.service";
+import {AuthApiService} from "./shared/api/auth-api.service";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {ReactiveFormsModule} from "@angular/forms";
+import {AuthService} from "./shared/services/auth.service";
+import {AuthGuardService} from "./shared/services/auth-guard.service";
+import {SessionInfoService} from "./shared/services/session-info.service";
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import {ReactiveFormsModule} from "@angular/forms";
         ReactiveFormsModule
     ],
   providers: [
+      AuthApiService,
       AuthService,
+      AuthGuardService,
+      SessionInfoService
   ],
   bootstrap: [AppComponent]
 })

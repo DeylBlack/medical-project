@@ -6,7 +6,7 @@ import {appSettings} from "../../core/CONSTANTS";
 import {AuthInterface} from "../interfaces/auth.interface";
 
 @Injectable()
-export class AuthService {
+export class AuthApiService {
     private apiUrl = appSettings.apiUrl;
 
     constructor(
