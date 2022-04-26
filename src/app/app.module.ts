@@ -17,6 +17,8 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {AuthService} from "./shared/services/auth.service";
 import {AuthGuardService} from "./shared/services/auth-guard.service";
 import {SessionInfoService} from "./shared/services/session-info.service";
+import { ManagementPageComponent } from './management-page/management-page.component';
+import { UserInformationComponent } from './user-information/user-information.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import {SessionInfoService} from "./shared/services/session-info.service";
     MenuComponent,
     UserFormComponent,
     TestingComponent,
+    ManagementPageComponent,
+    UserInformationComponent,
   ],
     imports: [
         BrowserModule,
