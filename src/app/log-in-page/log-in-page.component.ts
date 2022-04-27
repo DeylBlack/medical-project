@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {AuthApiService} from "../shared/api/auth-api.service";
 import {AuthService} from "../shared/services/auth.service";
+import {Store} from "@ngrx/store";
+import {IAppState} from "../core/store/state/app.state";
+import * as userDataAction from '../core/store/actions/user-data.actions';
+import {selectUserDataLoading} from "../core/store/selectors/user-data.selectors";
 
 @Component({
   selector: 'app-log-in-page',
@@ -9,6 +13,7 @@ import {AuthService} from "../shared/services/auth.service";
   styleUrls: ['./log-in-page.component.css']
 })
 export class LogInPageComponent implements OnInit {
+  isLoading$ = this.store.select(selectUserDataLoading);
 
   public isLogin: boolean = true;
   public loginForm: FormGroup = this.fb.group({
@@ -25,18 +30,17 @@ export class LogInPageComponent implements OnInit {
     private fb: FormBuilder,
     private authApiService: AuthApiService,
     private authService: AuthService,
+    private store: Store<IAppState>,
   ) {}
 
   ngOnInit(): void {
   }
 
   public login():void{
-    this.authApiService.login(this.loginForm.value).subscribe((response: any) => {
-      this.authService.login(response.token, response.userId);
-    });
+    this.store.dispatch(userDataAction.auth({data: this.loginForm.value}));
   }
 
-  public registration(): void {
-    this.authApiService.register(this.registrationForm.value).subscribe();
+  public reg(): void {
+    this.store.dispatch(userDataAction.register({data: this.registrationForm.value}));
   }
 }

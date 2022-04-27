@@ -4,6 +4,7 @@ import {Observable} from "rxjs";
 
 import {appSettings} from "../../core/CONSTANTS";
 import {AuthInterface} from "../interfaces/auth.interface";
+import {UserDataInterface} from "../interfaces/user-data.interface";
 
 @Injectable()
 export class AuthApiService {
@@ -13,11 +14,11 @@ export class AuthApiService {
         private http: HttpClient,
     ) {}
 
-    public register(data: any): Observable<AuthInterface> {
-        return this.http.post<AuthInterface>(this.apiUrl + '/auth/register', data);
+    public register(data: any): Observable<void> {
+        return this.http.post<void>(this.apiUrl + '/auth/register', data);
     }
 
-    public login(data: any): Observable<AuthInterface> {
-        return this.http.post<AuthInterface>(this.apiUrl + '/auth/login', data);
+    public login(data: any): Observable<UserDataInterface> {
+        return this.http.post<UserDataInterface>(this.apiUrl + '/auth/login', data);
     }
 }
