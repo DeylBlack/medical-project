@@ -26,6 +26,8 @@ import {appReducer} from "./core/store/reducers/app.reducer";
 import {UserDataEffects} from "./core/store/effects/user-data.effects";
 import { LoadingSpinnerComponent } from './shared/components/loading-spinner/loading-spinner.component';
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import { ManagementPageComponent } from './management-page/management-page.component';
+import { UserInformationComponent } from './user-information/user-information.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
     UserFormComponent,
     TestingComponent,
     LoadingSpinnerComponent,
+    ManagementPageComponent,
+    UserInformationComponent,
   ],
     imports: [
         BrowserModule,
