@@ -17,6 +17,15 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {AuthService} from "./shared/services/auth.service";
 import {AuthGuardService} from "./shared/services/auth-guard.service";
 import {SessionInfoService} from "./shared/services/session-info.service";
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import {appReducer} from "./core/store/reducers/app.reducer";
+import {UserDataEffects} from "./core/store/effects/user-data.effects";
+import { LoadingSpinnerComponent } from './shared/components/loading-spinner/loading-spinner.component';
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import { ManagementPageComponent } from './management-page/management-page.component';
 import { UserInformationComponent } from './user-information/user-information.component';
 
@@ -27,6 +36,7 @@ import { UserInformationComponent } from './user-information/user-information.co
     MenuComponent,
     UserFormComponent,
     TestingComponent,
+    LoadingSpinnerComponent,
     ManagementPageComponent,
     UserInformationComponent,
   ],
@@ -38,7 +48,12 @@ import { UserInformationComponent } from './user-information/user-information.co
         CdkAccordionModule,
         MatSidenavModule,
         HttpClientModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        StoreModule.forRoot(appReducer),
+        StoreDevtoolsModule.instrument({maxAge: 25, logOnly: environment.production}),
+        EffectsModule.forRoot([UserDataEffects]),
+        StoreRouterConnectingModule.forRoot(),
+        MatProgressSpinnerModule
     ],
   providers: [
       AuthApiService,
