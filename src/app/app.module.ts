@@ -30,7 +30,6 @@ import { ManagementPageComponent } from './management-page/management-page.compo
 import { UserInformationComponent } from './user-information/user-information.component';
 import { ToastrModule } from 'ngx-toastr';
 
-
 @NgModule({
   declarations: [
     AppComponent,
