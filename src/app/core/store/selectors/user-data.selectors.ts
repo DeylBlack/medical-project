@@ -13,3 +13,8 @@ export const selectUserDataLoading = createSelector(
     selectUser,
     (state: IUserDataState) => state.isLoading,
 );
+
+export const selectError = createSelector(
+  selectUser,
+  (state: IUserDataState) => state.error,
+)

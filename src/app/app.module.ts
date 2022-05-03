@@ -28,6 +28,8 @@ import { LoadingSpinnerComponent } from './shared/components/loading-spinner/loa
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import { ManagementPageComponent } from './management-page/management-page.component';
 import { UserInformationComponent } from './user-information/user-information.component';
+import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
@@ -53,7 +55,8 @@ import { UserInformationComponent } from './user-information/user-information.co
         StoreDevtoolsModule.instrument({maxAge: 25, logOnly: environment.production}),
         EffectsModule.forRoot([UserDataEffects]),
         StoreRouterConnectingModule.forRoot(),
-        MatProgressSpinnerModule
+        MatProgressSpinnerModule,
+        ToastrModule.forRoot(),
     ],
   providers: [
       AuthApiService,
