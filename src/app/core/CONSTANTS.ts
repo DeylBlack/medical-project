@@ -1,3 +1,3 @@
 export const appSettings = {
-    apiUrl: 'http://localhost:4200/api',
+    apiUrl: 'https://hidden-lake-66781.herokuapp.com/api',
 }
