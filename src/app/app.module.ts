@@ -29,6 +29,8 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import { ManagementPageComponent } from './management-page/management-page.component';
 import { UserInformationComponent } from './user-information/user-information.component';
 import { ToastrModule } from 'ngx-toastr';
+import {HistoryEffects} from "./core/store/effects/history.effects";
+import {HistoryApiService} from "./shared/api/history-api.service";
 
 @NgModule({
   declarations: [
@@ -52,7 +54,7 @@ import { ToastrModule } from 'ngx-toastr';
         ReactiveFormsModule,
         StoreModule.forRoot(appReducer),
         StoreDevtoolsModule.instrument({maxAge: 25, logOnly: environment.production}),
-        EffectsModule.forRoot([UserDataEffects]),
+        EffectsModule.forRoot([UserDataEffects, HistoryEffects]),
         StoreRouterConnectingModule.forRoot(),
         MatProgressSpinnerModule,
         ToastrModule.forRoot(),
@@ -61,7 +63,8 @@ import { ToastrModule } from 'ngx-toastr';
       AuthApiService,
       AuthService,
       AuthGuardService,
-      SessionInfoService
+      SessionInfoService,
+      HistoryApiService
   ],
   bootstrap: [AppComponent]
 })
