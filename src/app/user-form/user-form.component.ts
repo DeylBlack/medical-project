@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import * as historyActions from "../core/store/actions/history.actions";
 import {Store} from "@ngrx/store";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+
+import * as historyActions from "../core/store/actions/history.actions";
 import {IAppState} from "../core/store/state/app.state";
-import {selectUserDataLoading} from "../core/store/selectors/user-data.selectors";
 import {selectHistoryLoading} from "../core/store/selectors/history.selectors";
 
 @Component({
@@ -32,5 +32,4 @@ export class UserFormComponent implements OnInit {
   public createInspection():void{
     this.store.dispatch(historyActions.createHistory({historyItem: this.inspectionForm.value}));
   }
-
 }
