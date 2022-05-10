@@ -47,6 +47,8 @@ ul {
   align-items: center;
   justify-content: center;
   margin-top: -0px;
+  position: fixed;
+  width: 100%;
 }
 
 #menu-toggle {
@@ -88,7 +90,7 @@ ul {
 
 #menu-toggle:checked ~ .menu-btn > span {
   transform: rotate(44deg);
-  left: 250px;
+  left: 235px;
   top: 12.5px;
 }
 
