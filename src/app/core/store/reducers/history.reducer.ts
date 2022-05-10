@@ -15,4 +15,9 @@ export const historyReducer = createReducer<IHistoryState>(
         }
     }),
     on(historyActions.historyNotLoaded, state => ({...state, isLoading: false})),
+
+    // Create History
+    on(historyActions.createHistory, state => ({...state, isLoading: true})),
+    on(historyActions.createHistory, state => ({...state, isLoading: false})),
+    on(historyActions.historyNotCreate, state => ({...state, isLoading: false})),
 );
