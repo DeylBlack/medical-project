@@ -16,4 +16,8 @@ export class HistoryApiService {
     public getAllHistory(): Observable<Array<IHistory>> {
         return this.http.get<Array<IHistory>>(this.apiUrl + '/config/history');
     }
+
+    public createHistoryItem(historyItem: IHistory): Observable<IHistory> {
+      return this.http.post<IHistory>(this.apiUrl + '/config/history', historyItem);
+    }
 }

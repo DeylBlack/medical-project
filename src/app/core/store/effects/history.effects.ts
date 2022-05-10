@@ -20,6 +20,17 @@ export class HistoryEffects {
         })
     ));
 
+     createHistory$ = createEffect(() => this.actions.pipe(
+        ofType(historyActions.createHistory),
+       switchMap(({historyItem}) => {
+            return this.historyApiService.createHistoryItem(historyItem).pipe(
+                switchMap(() => from([
+                    historyActions.historyCreate()
+                ]))
+            )
+        })
+    ));
+
     constructor(
         private actions: Actions,
         private toast: ToastrService,
