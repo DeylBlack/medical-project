@@ -20,17 +20,17 @@
   height: auto;
   min-height: 20px;
   font-size: 50px;
-  padding-top: 20px;
+  padding-top: 88px;
   text-align: center;
   line-height: 42px;
 }
 
 .information-text {
-  margin: 90px auto;
   border: 1px solid;
   height: 0px;
   width: 50%;
   text-align: center;
+  margin-top: 90px;
 }
 
 .information {
