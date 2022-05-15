@@ -6,7 +6,8 @@
     "start": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "heroku-postbuild": "cd ANGULAR_APP_FOLDER && npm install"
   },
   "private": true,
   "proxy": "https://hidden-lake-66781.herokuapp.com",
