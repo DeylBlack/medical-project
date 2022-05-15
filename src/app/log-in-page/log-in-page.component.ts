@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {Store} from "@ngrx/store";
+
 import {AuthApiService} from "../shared/api/auth-api.service";
 import {AuthService} from "../shared/services/auth.service";
-import {Store} from "@ngrx/store";
 import {IAppState} from "../core/store/state/app.state";
 import * as userDataAction from '../core/store/actions/user-data.actions';
 import {selectUserDataLoading} from "../core/store/selectors/user-data.selectors";
