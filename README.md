@@ -4,7 +4,7 @@
 
 run `npm install` or `npm i` for install packages
 
-run `npm start` for start server. After compiling you can open browser
+run `npm run app` for start server. After compiling you can open browser
 and insert in search string `localhost:4200` and you should see your application.
 
 run `npm test` for start all tests build

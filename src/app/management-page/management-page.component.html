@@ -1,0 +1,19 @@
+<div class="management">
+  <p class="inspection-management">Сделанные осмотры </p>
+
+  <ng-container *ngIf="!(isLoading$ | async); else loading">
+    <div *ngFor="let history of (history$ | async); let i = index" class="management-border">
+      <p class="management-text-header">Осмотр {{i+1}}</p>
+      <p class="management-text"><b>Страна осмотра:</b><br/>{{history.country}}</p>
+      <p class="management-text"><b>Дата осмотра:</b><br/>{{history.date}}</p>
+      <p class="management-text"><b>Врач</b><br/>{{history.doctor}}</p>
+      <p class="management-text"><b>Описание осмотра:</b><br/>{{history.description}}</p>
+      <a href=""><b><p class="management-text-b">Cм.Анкету</p></b></a>
+    </div>
+  </ng-container>
+
+  <ng-template #loading>
+    <app-loading-spinner></app-loading-spinner>
+  </ng-template>
+</div>
+

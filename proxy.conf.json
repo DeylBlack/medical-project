@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "https://hidden-lake-66781.herokuapp.com",
+    "secure": false
+  }
+}
