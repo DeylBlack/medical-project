@@ -7,17 +7,15 @@
       <li><a routerLink="/login" class="menu-item">Вход/Регистрация</a></li>
     </ul>
   </mat-drawer>
+
   <div class="menu-sidenav-content">
     <div class="menu">
+      <mat-icon *ngIf="!drawer.opened;else close" (click)="drawer.toggle()" class="icon">menu</mat-icon>
+      <ng-template #close>
+        <mat-icon (click)="drawer.toggle()" class="icon">close</mat-icon>
+      </ng-template>
       <p class="menu-text"> Medical Project</p>
-      </div>
-      <div class="hamburger-menu">
-        <input id="menu-toggle" type="checkbox" />
-        <label class="menu-btn" for="menu-toggle" mat-button (click)="drawer.toggle()">
-          <span></span>
-        </label>
     </div>
   </div>
   <router-outlet></router-outlet>
 </mat-drawer-container>
-
