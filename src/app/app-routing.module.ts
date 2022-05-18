@@ -6,6 +6,7 @@ import {TestingComponent} from "./testing/components/testing.component";
 import {AuthGuardService} from "./shared/services/auth-guard.service";
 import {ManagementPageComponent} from "./management-page/management-page.component";
 import {UserInformationComponent} from "./user-information/user-information.component";
+import {MainPageComponent} from "./main-page/main-page.component";
 
 const routes: Routes = [
     {
@@ -35,6 +36,11 @@ const routes: Routes = [
     {
       path: 'user-information',
       component: UserInformationComponent,
+      canActivate: [AuthGuardService]
+    },
+    {
+      path: 'main',
+      component: MainPageComponent,
       canActivate: [AuthGuardService]
     },
 ];
