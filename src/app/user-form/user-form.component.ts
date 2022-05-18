@@ -5,6 +5,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import * as historyActions from "../core/store/actions/history.actions";
 import {IAppState} from "../core/store/state/app.state";
 import {selectHistoryLoading} from "../core/store/selectors/history.selectors";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-user-form',
@@ -24,6 +25,7 @@ export class UserFormComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private store: Store<IAppState>,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -31,5 +33,6 @@ export class UserFormComponent implements OnInit {
 
   public createInspection():void{
     this.store.dispatch(historyActions.createHistory({historyItem: this.inspectionForm.value}));
+    this.router.navigate(['main']);
   }
 }

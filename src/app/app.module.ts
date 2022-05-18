@@ -32,6 +32,7 @@ import { ToastrModule } from 'ngx-toastr';
 import {HistoryEffects} from "./core/store/effects/history.effects";
 import {HistoryApiService} from "./shared/api/history-api.service";
 import {MatIconModule} from "@angular/material/icon";
+import { MainPageComponent } from './main-page/main-page.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import {MatIconModule} from "@angular/material/icon";
     LoadingSpinnerComponent,
     ManagementPageComponent,
     UserInformationComponent,
+    MainPageComponent,
   ],
     imports: [
         BrowserModule,
