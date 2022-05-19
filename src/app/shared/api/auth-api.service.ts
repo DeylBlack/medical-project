@@ -14,11 +14,11 @@ export class AuthApiService {
         private http: HttpClient,
     ) {}
 
-    public register(data: any): Observable<void> {
-        return this.http.post<void>(this.apiUrl + '/auth/register', data);
+    public register(data: AuthInterface): Observable<void> {
+        return this.http.post<void>(this.apiUrl + '/auth/doctor/register', data);
     }
 
-    public login(data: any): Observable<UserDataInterface> {
-        return this.http.post<UserDataInterface>(this.apiUrl + '/auth/login', data);
+    public login(data: AuthInterface): Observable<UserDataInterface> {
+        return this.http.post<UserDataInterface>(this.apiUrl + '\n' + '/auth/doctor/login', data);
     }
 }
