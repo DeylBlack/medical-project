@@ -19,6 +19,6 @@ export class AuthApiService {
     }
 
     public login(data: AuthInterface): Observable<UserDataInterface> {
-        return this.http.post<UserDataInterface>(this.apiUrl + '\n' + '/auth/doctor/login', data);
+        return this.http.post<UserDataInterface>(this.apiUrl + '/auth/doctor/login', data);
     }
 }
