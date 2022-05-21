@@ -18,13 +18,15 @@ export class LogInPageComponent implements OnInit {
 
   public isLogin: boolean = true;
   public loginForm: FormGroup = this.fb.group({
-    email: [null, Validators.required],
+    name: [null, Validators.required],
     password: [null, Validators.required],
   });
 
   public registrationForm: FormGroup = this.fb.group({
     email: [null, Validators.required],
     password: [null, Validators.required],
+    phone: [null, Validators.required],
+    name: [null, Validators.required],
   });
 
   constructor(

@@ -3,8 +3,8 @@
     <form [formGroup]="loginForm" class="login-box">
       <h2>Вход</h2>
       <div class="user-box">
-        <label> Почта</label>
-        <input class="login-box-email" formControlName="email" type="email">
+        <label>Логин</label>
+        <input class="login-box-email" formControlName="name" type="text">
       </div>
       <div class="user-box">
         <label>Пароль</label>
@@ -27,8 +27,16 @@
     <form [formGroup]="registrationForm" class="login-box">
       <h2>Регистрация </h2>
       <div class="user-box">
+        <label>Имя</label>
+        <input class="login-box-email" formControlName="name" type="text">
+      </div>
+      <div class="user-box">
         <label> Почта</label>
         <input class="login-box-email" formControlName="email" type="email">
+      </div>
+      <div class="user-box">
+        <label>Телефон</label>
+        <input class="login-box-email" formControlName="phone" type="phone">
       </div>
       <div class="user-box">
         <label>Пароль</label>
