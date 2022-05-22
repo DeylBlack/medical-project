@@ -1,4 +1,4 @@
 export interface UserDataInterface {
-    token: string;
-    userId: string;
+  token: string;
+  userId: string;
 }
