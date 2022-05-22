@@ -1,18 +1,16 @@
-import {createReducer, on} from "@ngrx/store";
+import { createReducer, on } from '@ngrx/store';
 import * as appConfigActions from '../actions/app-config.actions';
-import {IAppConfigState, initialAppConfigState} from "../state/app-config.state";
+import { IAppConfigState, initialAppConfigState } from '../state/app-config.state';
 
 export const appConfigReducer = createReducer<IAppConfigState>(
-    initialAppConfigState,
+  initialAppConfigState,
 
-    // Auth
-    on(appConfigActions.config, state => ({ ...state, isLoading: true })),
-    on(appConfigActions.configSuccess, (state, { appConfig }) => {
-        return {
-            ...state,
-            isLoading: false,
-            appConfig: appConfig,
-        }
-    }),
-    on(appConfigActions.configNotSuccess, state => ({ ...state, isLoading: false })),
+  // Auth
+  on(appConfigActions.config, (state) => ({ ...state, isLoading: true })),
+  on(appConfigActions.configSuccess, (state, { appConfig }) => ({
+    ...state,
+    isLoading: false,
+    appConfig,
+  })),
+  on(appConfigActions.configNotSuccess, (state) => ({ ...state, isLoading: false })),
 );

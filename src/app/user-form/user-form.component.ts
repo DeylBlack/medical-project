@@ -1,25 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import {Store} from "@ngrx/store";
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import * as historyActions from "../core/store/actions/history.actions";
-import {IAppState} from "../core/store/state/app.state";
-import {selectHistoryLoading} from "../core/store/selectors/history.selectors";
-import {Router} from "@angular/router";
+import { Router } from '@angular/router';
+import * as historyActions from '../core/store/actions/history.actions';
+import { IAppState } from '../core/store/state/app.state';
+import { selectHistoryLoading } from '../core/store/selectors/history.selectors';
 
 @Component({
   selector: 'app-user-form',
   templateUrl: './user-form.component.html',
-  styleUrls: ['./user-form.component.css']
+  styleUrls: ['./user-form.component.css'],
 })
-export class UserFormComponent implements OnInit {
+export class UserFormComponent {
   isLoading$ = this.store.select(selectHistoryLoading);
 
- public inspectionForm: FormGroup = this.fb.group({
-   country: [null, Validators.required],
-   date: [null, Validators.required],
-   doctor: [null, Validators.required],
-   description: [null, Validators.required],
+  public inspectionForm: FormGroup = this.fb.group({
+    country: [null, Validators.required],
+    date: [null, Validators.required],
+    doctor: [null, Validators.required],
+    description: [null, Validators.required],
   });
 
   constructor(
@@ -28,11 +28,8 @@ export class UserFormComponent implements OnInit {
     private router: Router,
   ) { }
 
-  ngOnInit(): void {
-  }
-
-  public createInspection():void{
-    this.store.dispatch(historyActions.createHistory({historyItem: this.inspectionForm.value}));
+  public createInspection():void {
+    this.store.dispatch(historyActions.createHistory({ historyItem: this.inspectionForm.value }));
     this.router.navigate(['main']);
   }
 }
