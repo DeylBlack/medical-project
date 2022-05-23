@@ -1,0 +1,55 @@
+<ng-container *ngIf="isAccount else setting">
+<p class="account-main"> Настроить аккаунт </p>
+  <div class="account">
+  <div class="account-setting">
+    <div class="account-circle">
+      <img src="https://acomics.ru/upload/avatar/id63576-m0f3mi95w4.jpg" alt=""/>
+    </div>
+    <div class="account-settings">Имя: Настя </div>
+    <div class="account-settings">Почта: test@gmail.com </div>
+    <div class="account-settings">Телефон: 1234 </div>
+    <div class="account-settings">Пароль: demo </div>
+    <div class="account-setting-button">
+    <button class="account-button" (click)="isAccount=false">Редактировать аккаунт</button>
+    </div>
+  </div>
+</div>
+</ng-container>
+
+<ng-template #setting>
+  <form [formGroup]="settingsForm">
+  <p class="account-main"> Настроить аккаунт </p>
+  <div class="account">
+    <div class="account-setting">
+      <div class="account-circle">
+        <img src="https://acomics.ru/upload/avatar/id63576-m0f3mi95w4.jpg" alt=""/>
+      </div>
+      <div class="account-box">
+        <label>Имя</label>
+        <input class="account-box-email" formControlName="name" type="text" required>
+        <p *ngIf="settingsForm.get('name')?.invalid && settingsForm.get('name')?.touched">
+          Не указано имя
+        </p>
+      </div>
+      <div class="account-box">
+        <label> Почта</label>
+        <input class="account-box-email" formControlName="email" type="email" required>
+        <p *ngIf="settingsForm.get('email')?.invalid && settingsForm.get('email')?.touched">
+          Не указан email
+        </p>
+      </div>
+      <div class="account-box">
+        <label>Телефон</label>
+        <input class="account-box-email" type="phone" formControlName="phone" required>
+        <p *ngIf="settingsForm.get('phone')?.invalid && settingsForm.get('phone')?.touched">
+          Не указан телефон
+        </p>
+      </div>
+      <div class="setting-button">
+        <button class="account-button" (click)="isAccount=true">Назад</button>
+        <button class="account-button" [disabled]="settingsForm.invalid">Отправить</button>
+      </div>
+    </div>
+  </div>
+  </form>
+</ng-template>

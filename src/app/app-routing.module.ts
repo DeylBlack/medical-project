@@ -6,6 +6,7 @@ import { AuthGuardService } from './shared/services/auth-guard.service';
 import { ManagementPageComponent } from './management-page/management-page.component';
 import { UserInformationComponent } from './user-information/user-information.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 const routes: Routes = [
   {
@@ -35,6 +36,11 @@ const routes: Routes = [
   {
     path: 'main',
     component: MainPageComponent,
+    canActivate: [AuthGuardService],
+  },
+  {
+    path: 'account-settings',
+    component: AccountSettingsComponent,
     canActivate: [AuthGuardService],
   },
 ];
