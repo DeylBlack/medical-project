@@ -58,14 +58,13 @@ input:invalid {
 
 .account-box-email {
   margin: 0 auto;
-  width: 99%;
+  width: 100%;
   padding: 0 0;
   height:30px;
   border-radius: 10px;
 }
 
 .account-box {
-  overflow: hidden;
   margin: 0 auto;
   width: 270px;
   margin-top: 4px;
