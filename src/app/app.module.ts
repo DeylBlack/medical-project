@@ -32,6 +32,7 @@ import { UserInformationComponent } from './user-information/user-information.co
 import { HistoryEffects } from './core/store/effects/history.effects';
 import { HistoryApiService } from './shared/api/history-api.service';
 import { MainPageComponent } from './main-page/main-page.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { MainPageComponent } from './main-page/main-page.component';
     ManagementPageComponent,
     UserInformationComponent,
     MainPageComponent,
+    AccountSettingsComponent,
   ],
   imports: [
     BrowserModule,
