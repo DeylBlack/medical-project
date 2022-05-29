@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-account-settings',
@@ -7,7 +7,6 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
   styleUrls: ['./account-settings.component.css'],
 })
 export class AccountSettingsComponent {
-
   public isAccount: boolean = true;
 
   public settingsForm: FormGroup = this.fb.group({

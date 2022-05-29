@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { SessionInfoService } from './session-info.service';
 import { UserDataInterface } from '../interfaces/user-data.interface';
 
@@ -16,7 +17,7 @@ export class AuthService {
       userId: id,
     };
     this.sessionInfo.setUserData(user);
-    this.router.navigate(['user-form']);
+    this.router.navigate(['main']);
   }
 
   public isLogin(): boolean {

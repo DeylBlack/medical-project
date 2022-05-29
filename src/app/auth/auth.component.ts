@@ -1,19 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
+import { Router } from '@angular/router';
 
+import { selectUserDataLoading } from '../core/store/selectors/user-data.selectors';
 import { AuthApiService } from '../shared/api/auth-api.service';
 import { AuthService } from '../shared/services/auth.service';
 import { IAppState } from '../core/store/state/app.state';
 import * as userDataAction from '../core/store/actions/user-data.actions';
-import { selectUserDataLoading } from '../core/store/selectors/user-data.selectors';
 
 @Component({
-  selector: 'app-log-in-page',
-  templateUrl: './log-in-page.component.html',
-  styleUrls: ['./log-in-page.component.css'],
+  selector: 'app-auth',
+  templateUrl: 'auth.component.html',
+  styleUrls: ['auth.component.css'],
 })
-export class LogInPageComponent {
+export class AuthComponent implements OnInit {
   isLoading$ = this.store.select(selectUserDataLoading);
 
   public isLogin: boolean = true;
@@ -35,7 +36,14 @@ export class LogInPageComponent {
     private authApiService: AuthApiService,
     private authService: AuthService,
     private store: Store<IAppState>,
+    private router: Router,
   ) {}
+
+  public ngOnInit(): void {
+    if (this.authService.isLogin()) {
+      this.router.navigate(['main']);
+    }
+  }
 
   public login():void {
     this.store.dispatch(userDataAction.auth({ data: this.loginForm.value }));
