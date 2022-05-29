@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
 import { Router } from '@angular/router';
-import * as historyActions from '../core/store/actions/history.actions';
-import { IAppState } from '../core/store/state/app.state';
-import { selectHistoryLoading } from '../core/store/selectors/history.selectors';
+
+import * as historyActions from '../../core/store/actions/history.actions';
+import { IAppState } from '../../core/store/state/app.state';
+import { selectHistoryLoading } from '../../core/store/selectors/history.selectors';
 
 @Component({
   selector: 'app-user-form',

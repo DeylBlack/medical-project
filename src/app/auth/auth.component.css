@@ -1,0 +1,53 @@
+.login-box {
+    margin: 100px auto;
+    width: 400px;
+    height: auto;
+    min-height: 467px;
+    background: black;
+    border-radius: 15px;
+}
+
+h2 {
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.user-box {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 395px;
+    margin-top: 15px;
+}
+
+label {
+    color: white;
+}
+
+.login-box button:hover {
+    background: white;
+    color: #000000;
+    border-radius: 5px;
+}
+
+.login-box-email {
+    margin: 0 auto;
+    width: 99%;
+    padding: 0 0;
+    height:38px;
+}
+
+.button-registration {
+    width: 45%;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.button-login {
+    width: auto;
+    margin: 0 auto;
+    margin-top: 31px;
+    display: flex;
+    flex-direction: row;
+}
