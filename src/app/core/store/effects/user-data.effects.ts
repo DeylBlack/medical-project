@@ -61,7 +61,7 @@ export class UserDataEffects {
       ofType(userDataActions.authSuccess),
       withLatestFrom(this.store.select(selectUserData)),
       tap((data) => {
-        this.authService.login(data[1].token, data[1].userId);
+        this.authService.login(data[1].token, data[1].user);
       }),
     ),
     { dispatch: false },
