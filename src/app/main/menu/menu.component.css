@@ -2,6 +2,7 @@
   border: none;
   height: 100vh;
   margin-top: 0px;
+  background: none;
 }
 
 .menu-sidenav {
@@ -32,6 +33,24 @@
   font-weight: 600;
   text-decoration: none;
   margin-left: -30px;
+}
+
+.menu-item-name {
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.menu-circle {
+  margin: 10px auto -5px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid;
+  overflow: hidden;
 }
 
 ul {

@@ -10,8 +10,8 @@ export class SessionInfoService {
     localStorage.setItem(this.userDataSelector, JSON.stringify(data));
   }
 
-  public getUserData(): string | null {
-    return localStorage.getItem(this.userDataSelector);
+  public getUserData(): string {
+    return localStorage.getItem(this.userDataSelector) || '';
   }
 
   public removeUserData(): void {
