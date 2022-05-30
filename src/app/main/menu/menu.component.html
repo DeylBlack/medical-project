@@ -1,5 +1,9 @@
 <mat-drawer-container class="menu-container" autosize>
   <mat-drawer #drawer class="menu-sidenav" mode="side">
+    <div class="menu-item-name"> {{userData.user.name}} </div>
+    <div class="menu-circle">
+      <img src="https://acomics.ru/upload/avatar/id63576-m0f3mi95w4.jpg" alt=""/>
+    </div>
     <ul>
       <li><a routerLink="/main/main-page" class="menu-item" >Главная </a></li>
       <li><a routerLink="/main/user-form" class="menu-item">Провести осмотр</a></li>

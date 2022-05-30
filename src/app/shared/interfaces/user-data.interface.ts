@@ -9,3 +9,13 @@ export interface UserInterface {
   phone: number;
   email: string;
 }
+
+export const InitialUserData: UserDataInterface = {
+  token: '',
+  user: {
+    id: 0,
+    name: '',
+    phone: 0,
+    email: '',
+  },
+};
