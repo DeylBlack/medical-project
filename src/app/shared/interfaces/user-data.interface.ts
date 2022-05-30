@@ -1,4 +1,11 @@
 export interface UserDataInterface {
   token: string;
-  userId: string;
+  user: UserInterface;
+}
+
+export interface UserInterface {
+  id: number;
+  name: string;
+  phone: number;
+  email: string;
 }
