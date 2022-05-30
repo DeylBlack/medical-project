@@ -19,8 +19,6 @@ export class MenuComponent implements OnInit {
 
   public ngOnInit(): void {
     this.userData = JSON.parse(this.sessionInfo.getUserData())
-    console.log(this.userData)
-    // this.userName = this.sessionInfo.getUserData()
   }
 
   public logout(): void {
