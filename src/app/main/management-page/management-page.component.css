@@ -49,3 +49,8 @@ a {
   width: 80%;
   line-height: 45px;
 }
+
+.empty-data {
+  display: flex;
+  flex-direction: column;
+}

@@ -2,6 +2,11 @@
   <p class="inspection-management">Сделанные осмотры </p>
 
   <ng-container *ngIf="!(isLoading$ | async); else loading">
+    <div *ngIf="!(history$ | async)?.length" class="empty-data">
+      <p class="management-text"> There are no any data.</p>
+      <p class="management-text"> But you can add new review</p>
+      <a routerLink="/main/user-form">Провести осмотр</a>
+    </div>
     <div *ngFor="let history of (history$ | async); let i = index" class="management-border">
       <p class="management-text-header">Осмотр {{i+1}}</p>
       <p class="management-text"><b>Страна осмотра:</b><br/>{{history.country}}</p>

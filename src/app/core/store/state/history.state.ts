@@ -6,7 +6,6 @@ export interface IHistoryState {
 }
 
 export const initialHistoryState: IHistoryState = {
-  // @ts-ignore
-  history: null,
+  history: [],
   isLoading: false,
 };
