@@ -1,6 +1,6 @@
 export interface AuthInterface {
-  email: string;
+  email?: string;
   password: string;
   phone?: number;
-  name?: string;
+  name: string;
 }

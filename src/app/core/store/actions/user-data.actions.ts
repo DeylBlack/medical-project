@@ -8,5 +8,5 @@ export const authSuccess = createAction('[Login] Auth Success', props<{ data: Us
 export const authNotSuccess = createAction('[Login] Auth Not Success', props<{ error: any }>());
 
 export const register = createAction('[Login] Register', props<{ data: AuthInterface }>());
-export const registerSuccess = createAction('[Login] Register Success');
+export const registerSuccess = createAction('[Login] Register Success', props<{ data: AuthInterface }>());
 export const registerNotSuccess = createAction('[Login] Register Not Success', props<{ error: any }>());
