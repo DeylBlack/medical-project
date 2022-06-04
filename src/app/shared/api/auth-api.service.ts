@@ -19,6 +19,10 @@ export class AuthApiService {
   }
 
   public login(data: AuthInterface): Observable<UserDataInterface> {
-    return this.http.post<UserDataInterface>(`${this.apiUrl}/auth/doctor/login`, data);
+    const authData: AuthInterface = {
+      name: data.name,
+      password: data.password,
+    };
+    return this.http.post<UserDataInterface>(`${this.apiUrl}/auth/doctor/login`, authData);
   }
 }

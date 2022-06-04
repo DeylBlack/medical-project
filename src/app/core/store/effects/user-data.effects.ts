@@ -38,8 +38,15 @@ export class UserDataEffects {
   register$ = createEffect(() => this.actions.pipe(
     ofType(userDataActions.register),
     switchMap(({ data }) => this.authApiService.register(data).pipe(switchMap(() => from([
-      userDataActions.registerSuccess(),
+      userDataActions.registerSuccess({ data }),
     ])), catchError((e) => of(userDataActions.registerNotSuccess({ error: e }))))),
+  ));
+
+  registerSuccess$ = createEffect(() => this.actions.pipe(
+    ofType(userDataActions.registerSuccess),
+    switchMap(({ data }) => this.authApiService.login(data).pipe(switchMap((res) => from([
+      userDataActions.authSuccess({ data: res }),
+    ])), catchError((e) => of(userDataActions.authNotSuccess({ error: e }))))),
   ));
 
   registerError$ = createEffect(
