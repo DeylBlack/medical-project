@@ -1,6 +1,6 @@
 .login-box {
     margin: 100px auto;
-    width: 400px;
+    width: 450px;
     height: auto;
     min-height: 467px;
     background: black;
@@ -50,4 +50,16 @@ label {
     margin-top: 31px;
     display: flex;
     flex-direction: row;
+}
+
+.button-login-google {
+  width: 400px;
+  border: 2px solid #3996cc;
+  border-radius: 3px;
+  padding: 8px;
+  margin: auto;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
