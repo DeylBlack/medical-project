@@ -8,6 +8,7 @@ import { UserInformationComponent } from './user-information/user-information.co
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { MainComponent } from './main.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import {ScheduleComponent} from "./schedule/schedule.components";
 
 export const mainRoutes: Routes = [
   {
@@ -46,6 +47,11 @@ export const mainRoutes: Routes = [
       {
         path: 'account-settings',
         component: AccountSettingsComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'schedule',
+        component: ScheduleComponent,
         canActivate: [AuthGuardService],
       },
     ],
