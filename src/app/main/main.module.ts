@@ -15,6 +15,7 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
 import { SharedModule } from '../shared/shared.module';
 import { HistoryApiService } from '../shared/api/history-api.service';
 import { ScheduleComponent } from "./schedule/schedule.components";
+import {HelpAssistanceComponent} from "./help-assistance/help-assistance.component";
 
 @NgModule({
   imports: [
@@ -34,6 +35,7 @@ import { ScheduleComponent } from "./schedule/schedule.components";
     MainPageComponent,
     AccountSettingsComponent,
     ScheduleComponent,
+    HelpAssistanceComponent,
   ],
   providers: [
     HistoryApiService,
