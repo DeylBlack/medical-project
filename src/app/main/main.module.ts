@@ -14,7 +14,8 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { SharedModule } from '../shared/shared.module';
 import { HistoryApiService } from '../shared/api/history-api.service';
-import { ScheduleComponent } from "./schedule/schedule.components";
+import { ScheduleComponent } from './schedule/schedule.components';
+import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
   imports: [
@@ -34,9 +35,13 @@ import { ScheduleComponent } from "./schedule/schedule.components";
     MainPageComponent,
     AccountSettingsComponent,
     ScheduleComponent,
+    ChatComponent,
   ],
   providers: [
     HistoryApiService,
   ],
+  exports: [
+    ChatComponent,
+  ]
 })
 export class MainModule {}
