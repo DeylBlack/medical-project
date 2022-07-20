@@ -1,0 +1,22 @@
+<div class="chat-main">
+  <div class="chat-name">
+  Emily Dikinson
+  </div>
+  <div class="help-message">
+    Hello, can I help u today?
+  </div>
+  <div class="question-message">
+    Hi there! Can u send me ur latest offers?<br>11.48
+  </div>
+  <div class="help-message2">
+    Yes of course!<br>
+    11.50
+  </div>
+</div>
+<ng-container *ngIf="isHide; else chat">
+  here you can place chat icon
+</ng-container>
+
+<ng-template #chat>
+  here you can place template for open chat
+</ng-template>
