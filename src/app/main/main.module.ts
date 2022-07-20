@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import git add .{ NgModule } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
