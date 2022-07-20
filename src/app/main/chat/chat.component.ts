@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./chat.component.css'],
 })
   export class ChatComponent {
-  public isHide: boolean = false;
+    public isHide: boolean = false;
 }
 
