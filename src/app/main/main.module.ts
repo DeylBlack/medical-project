@@ -41,7 +41,7 @@ import { ChatComponent } from './chat/chat.component';
     HistoryApiService,
   ],
   exports: [
-    ChatComponent
+    ChatComponent,
   ]
 })
 export class MainModule {}
