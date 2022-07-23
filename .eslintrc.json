@@ -21,6 +21,9 @@
         "airbnb-typescript/base"
       ],
       "rules": {
+        "@typescript-eslint/no-useless-constructor": "off",
+        "@angular-eslint/no-empty-lifecycle-method": "off",
+        "@typescript-eslint/no-empty-function": "off",
         "class-methods-use-this": "off",
         "import/prefer-default-export": 0,
         "@angular-eslint/directive-selector": [
@@ -35,7 +38,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "app",
+            "prefix": ["app", "m"],
             "style": "kebab-case"
           }
         ]

@@ -8,7 +8,7 @@ import { UserInformationComponent } from './user-information/user-information.co
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { MainComponent } from './main.component';
 import { MainPageComponent } from './main-page/main-page.component';
-import {ScheduleComponent} from "./schedule/schedule.components";
+import { ScheduleComponent } from './schedule/schedule.components';
 
 export const mainRoutes: Routes = [
   {

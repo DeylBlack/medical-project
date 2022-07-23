@@ -42,6 +42,6 @@ import { ChatComponent } from './chat/chat.component';
   ],
   exports: [
     ChatComponent,
-  ]
+  ],
 })
 export class MainModule {}
