@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { SessionInfoService } from '../../shared/services/session-info.service';
-import {InitialUserData, UserDataInterface} from "../../shared/interfaces/user-data.interface";
+import { InitialUserData, UserDataInterface } from '../../shared/interfaces/user-data.interface';
 
 @Component({
   selector: 'app-menu',
@@ -18,7 +18,7 @@ export class MenuComponent implements OnInit {
   ) {}
 
   public ngOnInit(): void {
-    this.userData = JSON.parse(this.sessionInfo.getUserData())
+    this.userData = JSON.parse(this.sessionInfo.getUserData());
   }
 
   public logout(): void {

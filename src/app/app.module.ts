@@ -23,6 +23,8 @@ import { HistoryApiService } from './shared/api/history-api.service';
 import { AuthModule } from './auth/auth.module';
 import { MainModule } from './main/main.module';
 import { SharedModule } from './shared/shared.module';
+import { InputComponent } from './shared/ui-components/input/input.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const MedicalImports = [
   SharedModule,
@@ -33,6 +35,8 @@ const MedicalImports = [
 @NgModule({
   declarations: [
     AppComponent,
+    InputComponent,
+    NotFoundComponent,
   ],
   imports: [
     MedicalImports,
