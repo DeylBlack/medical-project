@@ -16,6 +16,7 @@ import { SharedModule } from '../shared/shared.module';
 import { HistoryApiService } from '../shared/api/history-api.service';
 import { ScheduleComponent } from './schedule/schedule.components';
 import { ChatComponent } from './chat/chat.component';
+import {HelpAssistanceComponent} from "./help-assistance/help-assistance.component";
 
 @NgModule({
   imports: [
@@ -36,6 +37,7 @@ import { ChatComponent } from './chat/chat.component';
     AccountSettingsComponent,
     ScheduleComponent,
     ChatComponent,
+    HelpAssistanceComponent,
   ],
   providers: [
     HistoryApiService,
