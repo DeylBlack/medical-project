@@ -9,7 +9,7 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
 import { MainComponent } from './main.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { ScheduleComponent } from './schedule/schedule.components';
-import {HelpAssistanceComponent} from "./help-assistance/help-assistance.component";
+import { HelpAssistanceComponent } from './help-assistance/help-assistance.component';
 
 export const mainRoutes: Routes = [
   {
