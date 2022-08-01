@@ -1,0 +1,15 @@
+.release-popup {
+    top: 100px;
+    position: relative;
+    width: 100%;
+    background: red;
+    padding: 10px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.release-popup p {
+    margin: 0;
+}

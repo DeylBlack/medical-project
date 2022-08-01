@@ -16,7 +16,8 @@ import { SharedModule } from '../shared/shared.module';
 import { HistoryApiService } from '../shared/api/history-api.service';
 import { ScheduleComponent } from './schedule/schedule.components';
 import { ChatComponent } from './chat/chat.component';
-import {HelpAssistanceComponent} from "./help-assistance/help-assistance.component";
+import { HelpAssistanceComponent } from './help-assistance/help-assistance.component';
+import { VersionPopupComponent } from './version-popup/version-popup.component';
 
 @NgModule({
   imports: [
@@ -38,6 +39,7 @@ import {HelpAssistanceComponent} from "./help-assistance/help-assistance.compone
     ScheduleComponent,
     ChatComponent,
     HelpAssistanceComponent,
+    VersionPopupComponent,
   ],
   providers: [
     HistoryApiService,
