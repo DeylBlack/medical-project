@@ -1,7 +1,28 @@
 .schedule-main {
   text-align: center;
-  margin: 0px auto;
+  margin: 10px;
   font-size: 50px;
   padding-top: 80px;
   line-height: 45px;
 }
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 84em;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+
+
+
+

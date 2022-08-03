@@ -7,3 +7,10 @@ import { Component } from '@angular/core';
 })
 export class ScheduleComponent {
 }
+
+//export interface Schedule {
+//day: string;
+//  time: string;
+//}
+
+
