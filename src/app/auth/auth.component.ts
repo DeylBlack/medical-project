@@ -29,6 +29,7 @@ export class AuthComponent implements OnInit {
     password: [null, Validators.required],
     phone: [null, Validators.required],
     name: [null, Validators.required],
+    secondpass: [null, Validators.required],
   });
 
   constructor(

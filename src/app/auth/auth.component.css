@@ -1,65 +1,211 @@
-.login-box {
-    margin: 100px auto;
-    width: 450px;
-    height: auto;
-    min-height: 467px;
-    background: black;
-    border-radius: 15px;
-}
-
 h2 {
-    margin: 0 auto;
-    color: white;
-    text-align: center;
-    padding-top: 20px;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 40px;
 }
 
-.user-box {
-    overflow: hidden;
-    margin: 0 auto;
-    width: 395px;
-    margin-top: 15px;
-}
+.login-user-box {
+  overflow: hidden;
+  }
 
 label {
-    color: white;
+  color: white;
+}
+
+.circle {
+  background-color: #FFFFFF;
+  height: 650px;
+  width: 650px;
+  border: 1px;
+  border-radius: 50%;
+  position: absolute;
+  left: -220px;
+  top: -431px;
+}
+
+.circle-logo {
+  font-family: sans-serif Inter;
+  font-weight: 100;
+  font-size: 100px;
+  text-align: right;
+  position: absolute;
+  bottom: 100px;
+  right: 150px;
+  color: #369096;
 }
 
 .login-box button:hover {
-    background: white;
-    color: #000000;
-    border-radius: 5px;
+  background: white;
+  color: #000000;
+  border-radius: 5px;
+}
+
+.user-box > label {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .login-box-email {
-    margin: 0 auto;
-    width: 99%;
-    padding: 0 0;
-    height:38px;
+  font-family: inherit;
+  width: 585px;
+  border: 0;
+  border-bottom: 2px solid #FFFFFF;
+  outline: 0;
+  margin: auto;
+  color: white;
+  background: transparent;
+  position: absolute;
+  right: 72px;
+  top: 10em;
+  font-size: 15px;
+}
+
+.password-box-email {
+  font-family: inherit;
+  width: 585px;
+  border: 0;
+  border-bottom: 2px solid #FFFFFF;
+  outline: 0;
+  background: transparent;
+  position: absolute;
+  right: 72px;
+  top: 16em;
 }
 
 .button-registration {
-    width: 45%;
-    height: 50px;
-    margin: 0 auto;
+  width: 350px;
+  border: 1px;
+  border-radius: 60px;
+  height: 40px;
+  position: absolute;
+  right: 185px;
+  top: 15em;
+  color: #369096;
+  background-color: #FFFFFF;
+  font-size: 20px;
+  font-family: sans-serif;
 }
 
-.button-login {
-    width: auto;
-    margin: 0 auto;
-    margin-top: 31px;
-    display: flex;
-    flex-direction: row;
+.button-registration:hover {
+  background-color: #d3d3d3;
+  border: 1px;
+  border-radius: 65px;
+  color: #369096;
+}
+
+.registration-word {
+  color: #FFFFFF;
+}
+
+.login-word {
+  color: #FFFFFF;
 }
 
 .button-login-google {
-  width: 400px;
-  border: 2px solid #3996cc;
-  border-radius: 3px;
+  width: 350px;
+  height: 40px;
+  border: 1px;
+  border-radius: 60px;
   padding: 8px;
-  margin: auto;
-  margin-bottom: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: #369096;
+  font-family: sans-serif;
+  font-size: 20px;
+  position: absolute;
+  right: 185px;
+  top: 19em;
+}
+
+.forgot-password {
+  color: #c8cbcc;
+  margin: auto 50px auto;
+  font-size: 15px;
+  position: absolute;
+  right: 20px;
+  top: 17em;
+}
+
+.registration-text {
+  color: #afbdb3;
+  font-size: 17px;
+  position: absolute;
+  right: 240px;
+  top: 26em;
+}
+
+.welcome-paragraph {
+  font-size: 35px;
+  font-family: sans-serif;
+  color: #2A6B70;
+  margin: 270px 55px auto;
+  word-break-inside: 10px;
+  word-break: break-word;
+  line-height: 50px;
+}
+
+.word-one-pro {
+  color: #3f7e91;
+}
+
+.word-two-med {
+  color: #8aadb8;
+}
+
+.word-between-button {
+  position: absolute;
+  right: 350px;
+  top: 350px;
+  font-size: 20px;
+  color: #FFFFFF;
+  font-family: sans-serif;
+}
+
+.registration-box-email {
+  font-family: inherit;
+  margin: 5px auto ;
+  width: 585px;
+  border: 0;
+  border-bottom: 2px solid #FFFFFF;
+  outline: 0;
+  background: transparent;
+  display: block;
+  font-size: 20px;
+}
+
+.registration-buttons {
+  width: 350px;
+  border: 1px;
+  border-radius: 60px;
+  height: 40px;
+  color: #369096;
+  background-color: #D9D9D9;
+  font-size: 20px;
+  font-family: sans-serif;
+  margin: 10px auto;
+  display: block;
+  position: relative;
+  top: 30px;
+}
+
+.registration-word-or {
+  color: #FFFFFF;
+  font-size: 20px;
+  margin:auto 590px;
+  position: relative;
+  top: 30px;
+}
+
+.login-text {
+  color: #D9D9D9;
+  font-size: 17px;
+  margin-left: 490px;
+  position: relative;
+  top: 40px;
+}
+
+.login-text > strong {
+  color: #FFFFFF;
 }
