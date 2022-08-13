@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 
 import { SessionInfoService } from '../../shared/services/session-info.service';
 import { InitialUserData, UserDataInterface } from '../../shared/interfaces/user-data.interface';
+import {hide} from "concurrently/dist/src/defaults";
 
 @Component({
   selector: 'app-menu',
