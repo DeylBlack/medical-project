@@ -76,3 +76,12 @@ ul {
   color: white;
   margin-top: 10px;
 }
+
+.list {
+  background: none;
+  outline: 0;
+  border: 0;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+}
