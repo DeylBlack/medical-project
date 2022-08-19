@@ -52,3 +52,11 @@
   border: 1px;
   border-radius: 5px;
 }
+
+.close-chat {
+  display: block;
+  margin: 0 auto 400px 63em;
+  position: relative;
+  right: 5px;
+  bottom: 395px;
+}
